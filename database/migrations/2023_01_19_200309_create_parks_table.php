@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('parks', function (Blueprint $table) {
             $table->id();
+            $table->string('title');     // название детали
+            $table->integer('price');    // цена детали
             $table->timestamps();
         });
     }

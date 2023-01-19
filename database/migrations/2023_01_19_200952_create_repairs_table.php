@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('repairs', function (Blueprint $table) {
             $table->id();
+            $table->integer('service_id');
+            $table->integer('worker_id');
+            $table->integer('car_id');
+            $table->integer('client_id');
+            $table->integer('reserve_id')->nullable();
+            $table->date('datereturn')->nullable();
             $table->timestamps();
         });
     }

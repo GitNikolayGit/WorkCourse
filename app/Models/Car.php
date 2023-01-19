@@ -17,7 +17,6 @@ class Car extends Model
         'patronymic',
         'brand_id',     // модель
         'color_id',     // цвет
-        //'client_id',
     ];
     // связь с ремонтом
     public function repair(){

@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+            $table->integer('date');           // год выпуска
+            $table->string('num')->unique();   // госномер
+            $table->string('malfunctions');    // неисправности
+            $table->string('surname');         // владелец
+            $table->string('firstName');
+            $table->string('patronymic');
+            $table->integer('brand_id');       // модель
+            $table->integer('color_id');       // цвет
             $table->timestamps();
         });
     }
